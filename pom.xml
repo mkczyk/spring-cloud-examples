@@ -23,6 +23,10 @@
     <modules>
         <module>orders-service</module>
         <module>invoices-service</module>
+        <module>email-service</module>
+        <module>minio-s3-example</module>
+        <module>aws-s3-example</module>
+        <module>cloud-s3-example</module>
     </modules>
 
     <build>
