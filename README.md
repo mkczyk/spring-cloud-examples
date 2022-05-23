@@ -2,6 +2,14 @@
 
 Spring Cloud Examples
 
+Ports:
+- orders-service: 7771
+- invoices-service: 7772
+- email-service: 7773
+- minio-s3-example: 7781
+- aws-s3-example: 7782
+- cloud-s3-example: 7783
+- Minio web console: 9001
 
 ## S3
 
