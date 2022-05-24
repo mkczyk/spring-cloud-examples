@@ -1,16 +1,9 @@
 package com.example.minios3example;
 
-import io.minio.BucketExistsArgs;
-import io.minio.GetObjectArgs;
-import io.minio.MakeBucketArgs;
-import io.minio.MinioClient;
-import io.minio.PutObjectArgs;
+import io.minio.*;
 import io.minio.errors.MinioException;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
-import org.springframework.core.io.Resource;
-import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ResourceUtils;
 
@@ -27,7 +20,7 @@ import java.security.NoSuchAlgorithmException;
 @Slf4j
 public class MinioS3Service {
 
-    public static final String BUCKET_NAME = "mini-s3-example";
+    public static final String BUCKET_NAME = "minio-s3-example";
     public static final String MINIO_SERVER_URL = "http://localhost:9000";
     public static final String MINIO_ACCESS_KEY = "minioadmin";
     public static final String MINIO_SECRET_KEY = "minioadmin";
@@ -40,8 +33,8 @@ public class MinioS3Service {
             initMinioClient();
             createBucket(BUCKET_NAME);
             File file = ResourceUtils.getFile("classpath:test.txt");
-            upload(BUCKET_NAME,"test.txt",  new FileInputStream(file), file.length());
-            download(BUCKET_NAME,"test.txt");
+            upload(BUCKET_NAME, "test.txt", new FileInputStream(file), file.length());
+            download(BUCKET_NAME, "test.txt");
         } catch (MinioException e) {
             log.error("HTTP trace: {}", e.httpTrace());
             throw new RuntimeException(e);
