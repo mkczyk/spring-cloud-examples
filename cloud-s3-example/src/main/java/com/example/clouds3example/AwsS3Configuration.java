@@ -1,6 +1,5 @@
 package com.example.clouds3example;
 
-import com.amazonaws.ClientConfiguration;
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.client.builder.AwsClientBuilder;
@@ -24,7 +23,8 @@ public class AwsS3Configuration {
     @Bean
     public AmazonS3 amazonS3() {
         return AmazonS3Client.builder()
-            .withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(this.environment.getProperty("cloud.aws.s3.endpoint"),
+            .withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(this.environment.getProperty("cloud" +
+                ".aws.s3.endpoint"),
                 awsRegionProperties.getStatic()))
             .withPathStyleAccessEnabled(true)
             .withCredentials(new AWSStaticCredentialsProvider(new BasicAWSCredentials(awsCredentialsProperties.getAccessKey(), awsCredentialsProperties.getSecretKey())))
