@@ -10,6 +10,7 @@ Ports:
 - aws-s3-example: 7782
 - cloud-s3-example: 7783
 - Minio web console: 9001
+- eureka-server: 8761
 
 ## S3
 
@@ -24,3 +25,7 @@ Web console: http://localhost:9001/
 Username: minioadmin
 
 Password: minioadmin
+
+## Eureka
+
+Eureka server: http://localhost:8761/

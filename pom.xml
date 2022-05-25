@@ -27,6 +27,7 @@
         <module>minio-s3-example</module>
         <module>aws-s3-example</module>
         <module>cloud-s3-example</module>
+        <module>eureka-server</module>
     </modules>
 
     <build>
