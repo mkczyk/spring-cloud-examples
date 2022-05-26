@@ -8,6 +8,7 @@ Ports:
 - email-service: 7773
 - eureka-server: 8761
 - config-server: 8762
+- admin-server: 8763
 - minio-s3-example: 7781
 - aws-s3-example: 7782
 - cloud-s3-example: 7783
@@ -34,3 +35,7 @@ Eureka server: http://localhost:8761/
 # Config
 
 Example order-service remote configuration: http://localhost:8762/orders-service/default
+
+# Admin
+
+Admin web: http://localhost:8763/wallboard
