@@ -1,1 +1,5 @@
+###
 GET http://localhost:7771/order/add
+
+###
+GET http://localhost:7771/value
