@@ -6,9 +6,9 @@ Ports:
 - orders-service: 7771
 - invoices-service: 7772
 - email-service: 7773
-- eureka-server: 8761
-- config-server: 8762
-- admin-server: 8763
+- eureka-server: 8861
+- config-server: 8862
+- admin-server: 8863
 - minio-s3-example: 7781
 - aws-s3-example: 7782
 - cloud-s3-example: 7783
@@ -30,12 +30,12 @@ Password: minioadmin
 
 ## Eureka
 
-Eureka server: http://localhost:8761/
+Eureka server: http://localhost:8861/
 
 # Config
 
-Example order-service remote configuration: http://localhost:8762/orders-service/default
+Example order-service remote configuration: http://localhost:8862/orders-service/default
 
 # Admin
 
-Admin web: http://localhost:8763/wallboard
+Admin web: http://localhost:8863/wallboard
